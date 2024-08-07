@@ -8,12 +8,12 @@ A JavaScript module to compare the similarity between two strings. It returns a 
 Install via npm:
 
 ```bash
-npm install howclose
+npm install how-close
 ```
 
 ## Usage
 ```javascript
-const HowClose = require('howclose');
+const HowClose = require('how-close');
 
 const comparison = new HowClose('kitten', 'sitting');
 console.log(comparison.percentage); // Similarity score
@@ -31,7 +31,7 @@ Example
 * `similarity(s1, s2)`: A function to reinitialise the object with a new percentage.
 
 ```javascript
-const HowClose = require('howclose');
+const HowClose = require('how-close');
 
 const comparison1 = new HowClose('hello world', 'hello');
 console.log(comparison1.percentage); // 0.5
