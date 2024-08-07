@@ -1,8 +1,11 @@
 {
   "name": "how-close",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A JavaScript module to compare the similarity between two strings.",
   "main": "index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "babel src -d lib",
     "test": "mocha"
