@@ -1,0 +1,39 @@
+{
+  "name": "how-close",
+  "version": "1.0.0",
+  "description": "A JavaScript module to compare the similarity between two strings.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrmedd/how-close.git"
+  },
+  "keywords": [
+    "string similarity",
+    "string comparison",
+    "edit distance",
+    "levenshtein distance",
+    "text similarity",
+    "fuzzy matching",
+    "string matching",
+    "text comparison",
+    "string analysis"
+  ],
+  "author": "jrmedd",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/jrmedd/how-close/issues"
+  },
+  "homepage": "https://github.com/jrmedd/how-close#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.0",
+    "standard": "^17.1.0"
+  }
+}
