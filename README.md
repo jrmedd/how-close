@@ -1,4 +1,4 @@
-![build](https://github.com/jrmedd/how-close/actions/workflows/main.yml/badge.svg)
+![build](https://github.com/jrmedd/how-close/actions/workflows/main.yaml/badge.svg)
 # HowClose
 
 A JavaScript module to compare the similarity between two strings. It returns a value between 0 and 1 indicating how similar the shorter string is to the larger string.
