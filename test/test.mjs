@@ -1,5 +1,5 @@
 import { assert } from 'chai'
-import HowClose from '../lib/HowClose.js'
+import HowClose from '../lib/howClose.js'
 
 
 describe('HowClose', function () {
