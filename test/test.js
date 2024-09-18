@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import  HowClose  from "../lib/howClose.js";
+import HowClose from "../lib/howClose.js";
 
 describe("HowClose", function () {
   it("should return 1.0 for two identical strings", function () {

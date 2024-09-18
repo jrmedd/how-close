@@ -1,6 +1,6 @@
 {
   "name": "how-close",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Compare the similarity between two strings with JavaScript.",
   "main": "./lib/howClose.cjs",
   "module": "./lib/howClose.js",

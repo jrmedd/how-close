@@ -1,33 +1,32 @@
 /**
- * Compare the similarity between two strings. It returns a value between 0 and 1 indicating how similar the shorter string is to the larger string.
+ * Compares the similarity between two strings. It returns a value between 0 and 1, indicating how similar the shorter string is to the longer string.
  *
  * @remarks
+ * This class is optimized for usability over speed. The similarity is calculated based on the Levenshtein distance between the two strings.
  *
- * @param string1 - The first string
- * @param string2 - The second string to compare it to
- * @param percentage A number between 0 and 1 for similarity
- * @param contains Whether the longer string contains the shorter string
+ * @param string1 - The first string to compare.
+ * @param string2 - The second string to compare against the first string.
+ * @param percentage - A number between 0 and 1 representing the similarity between the two strings, where 1 means identical and 0 means completely different.
+ * @param contains - A boolean indicating whether the longer string contains the shorter string.
  *
  * @beta
  */
 class HowClose {
-  /** The first string */
+  /** The first string to compare. */
   string1: string;
-  /** The second string */
+  /** The second string to compare against. */
   string2: string;
-  /** A number between 0 and 1 for similarity */
+  /** The similarity percentage between the two strings. */
   percentage: number;
-  /** Whether the longer string contains the shorter string */
+  /** Whether the longer string contains the shorter string. */
   contains: boolean;
 
   /**
-   * Full name: {@link (HowClose:constructor)}
+   * Creates an instance of HowClose.
    *
-   * Takes two parameters:
-   * @param s1 - A string to set {@link (HowClose:string1) | string1}
-   * @param s2 - A string to set {@link (HowClose:string2) | string2}
+   * @param s1 - The first string to set {@link HowClose.string1 | string1}.
+   * @param s2 - The second string to set {@link HowClose.string2 | string2}.
    */
-
   constructor(s1: string, s2: string) {
     this.string1 = s1;
     this.string2 = s2;
@@ -36,11 +35,19 @@ class HowClose {
     this.similarity(s1, s2);
   }
 
+  /**
+   * Calculates the similarity between two strings.
+   *
+   * @param s1 - The first string to compare.
+   * @param s2 - The second string to compare.
+   * @returns The similarity percentage, a number between 0 and 1, where 1 means the strings are identical and 0 means they are completely different.
+   */
   similarity(s1: string, s2: string): number {
     let longer: string = s1;
     let shorter: string = s2;
     this.string1 = s1;
     this.string2 = s2;
+
     if (s1.length < s2.length) {
       longer = s2;
       shorter = s1;
@@ -57,6 +64,13 @@ class HowClose {
     return this.percentage;
   }
 
+  /**
+   * Calculates the Levenshtein distance between two strings.
+   *
+   * @param s1 - The first string.
+   * @param s2 - The second string.
+   * @returns The edit distance between the two strings, which is the number of single-character edits (insertions, deletions, or substitutions) required to change one string into the other.
+   */
   editDistance(s1: string, s2: string): number {
     s1 = s1.toLowerCase();
     s2 = s2.toLowerCase();
