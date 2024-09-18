@@ -1,8 +1,32 @@
+/**
+ * Compare the similarity between two strings. It returns a value between 0 and 1 indicating how similar the shorter string is to the larger string.
+ *
+ * @remarks
+ *
+ * @param string1 - The first string
+ * @param string2 - The second string to compare it to
+ * @param percentage A number between 0 and 1 for similarity
+ * @param contains Whether the longer string contains the shorter string
+ *
+ * @beta
+ */
 class HowClose {
+  /** The first string */
   string1: string;
+  /** The second string */
   string2: string;
+  /** A number between 0 and 1 for similarity */
   percentage: number;
+  /** Whether the longer string contains the shorter string */
   contains: boolean;
+
+  /**
+   * Full name: {@link (HowClose:constructor)}
+   *
+   * Takes two parameters:
+   * @param s1 - A string to set {@link (HowClose:string1) | string1}
+   * @param s2 - A string to set {@link (HowClose:string2) | string2}
+   */
 
   constructor(s1: string, s2: string) {
     this.string1 = s1;
@@ -62,4 +86,4 @@ class HowClose {
   }
 }
 
-export { HowClose };
+export default HowClose;

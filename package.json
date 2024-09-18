@@ -1,7 +1,7 @@
 {
   "name": "how-close",
-  "version": "1.0.3",
-  "description": "A JavaScript package to compare the similarity between two strings.",
+  "version": "1.1.0",
+  "description": "Compare the similarity between two strings with JavaScript.",
   "main": "./lib/howClose.cjs",
   "module": "./lib/howClose.js",
   "type": "module",
@@ -21,7 +21,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsup src/howClose.ts --clean --dts --out-dir lib/ --format cjs,esm --cjsInterop",
+    "build": "tsup src/howClose.ts --clean --dts --out-dir lib/ --format cjs,esm && fix-tsup-cjs --cwd lib",
     "test": "mocha"
   },
   "repository": {
@@ -48,6 +48,7 @@
   "devDependencies": {
     "@types/node": "^22.5.5",
     "chai": "^5.1.1",
+    "fix-tsup-cjs": "^1.2.0",
     "mocha": "^10.7.0",
     "prettier": "3.3.3",
     "tsup": "^8.3.0",
