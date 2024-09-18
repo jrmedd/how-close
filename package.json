@@ -1,13 +1,27 @@
 {
   "name": "how-close",
   "version": "1.0.3",
-  "description": "A JavaScript module to compare the similarity between two strings.",
-  "main": "index.js",
+  "description": "A JavaScript package to compare the similarity between two strings.",
+  "main": "./lib/howClose.cjs",
+  "module": "./lib/howClose.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/howClose.d.ts",
+        "default": "./lib/howClose.js"
+      },
+      "require": {
+        "types": "./lib/howClose.d.cts",
+        "default": "./lib/howClose.cjs"
+      }
+    }
+  },
   "files": [
     "lib"
   ],
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "tsup src/howClose.ts --clean --dts --out-dir lib/ --format cjs,esm --cjsInterop",
     "test": "mocha"
   },
   "repository": {
@@ -32,11 +46,11 @@
   },
   "homepage": "https://github.com/jrmedd/how-close#readme",
   "devDependencies": {
-    "@babel/cli": "^7.24.8",
-    "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.3",
+    "@types/node": "^22.5.5",
     "chai": "^5.1.1",
     "mocha": "^10.7.0",
-    "standard": "^17.1.0"
+    "prettier": "3.3.3",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
   }
 }
